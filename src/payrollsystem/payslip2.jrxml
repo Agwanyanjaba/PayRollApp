@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="payslip2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[Select * from employees]]>
+	</queryString>
+	<field name="FirstName" class="java.lang.String"/>
+	<field name="Surname" class="java.lang.String"/>
+	<field name="AccountNumber" class="java.lang.String"/>
+	<field name="Deductions" class="java.lang.Integer"/>
+	<field name="Tax" class="java.math.BigDecimal"/>
+	<field name="NetSalary" class="java.math.BigDecimal"/>
+	<group name="FirstName">
+		<groupExpression><![CDATA[$F{FirstName}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="126" y="30" width="312" height="35" forecolor="#0000FF"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Wybosoft Payroll Report ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="55" y="1" width="108" height="65"/>
+				<imageExpression><![CDATA["G:\\Projects\\payroll Sytem\\src\\payrollsystem\\ICO\\wybosoft.gif"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="163" y="75" width="202" height="20" forecolor="#CC0000"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="438" y="0" width="127" height="65"/>
+				<imageExpression><![CDATA["G:\\Projects\\payroll Sytem\\src\\payrollsystem\\ICO\\wybosoft.gif"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="63" y="74" width="435" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="10" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<staticText>
+				<reportElement x="12" y="2" width="68" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FirstName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="2" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Surname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="2" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AccountNumber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="0" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deductions]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="2" width="88" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NetSalary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="0" width="68" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{AccountNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="1" width="83" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Surname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="309" y="1" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Deductions}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="1" width="88" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{NetSalary}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

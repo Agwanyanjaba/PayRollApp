@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addressbook>
+   <category name="home">
+      <person id="1">                                                           
+          <LASTNAME>Davolio</LASTNAME>
+          <FIRSTNAME>Nancy</FIRSTNAME>
+          <hobbies>
+          	<hobby>Radio Control</hobby>
+          	<hobby>R/C Cars</hobby>
+          	<hobby>Micro R/C Cars</hobby>
+          	<hobby>Die-Cast Models</hobby>
+          </hobbies>
+          <email>email1@my.domain.it</email>
+          <email>email2@my.domain2.it</email> 
+          
+      </person>
+      <person id="2">
+          <LASTNAME>Fuller</LASTNAME>
+          <FIRSTNAME>Andrew</FIRSTNAME>
+          <email>email3@my.domain3.it</email> 
+          <email>email4@my.domain4.it</email> 
+      </person>
+      <person id="3">                                                                 
+          <LASTNAME>Leverling</LASTNAME>
+          <FIRSTNAME>Janet</FIRSTNAME>
+          <hobbies>
+          	<hobby>Rockets</hobby>
+          	<hobby>Puzzles</hobby>
+          	<hobby>Science Hobby</hobby>
+          	<hobby>Toy Horse</hobby> 
+          </hobbies>
+          <email>email45@my.domain3.it</email> 
+          <email>email455@my.domain4.it</email> 
+      </person>
+  </category>
+  <category name="work">    
+      <person id="4">                                                            
+          <LASTNAME>Peacock</LASTNAME>
+          <FIRSTNAME>Margaret</FIRSTNAME>
+          <hobbies>
+          	<hobby>Toy Horse</hobby> 
+          </hobbies>
+          <email>Peacock@margaret.com</email>  
+      </person>
+      <person id="5">
+          <LASTNAME>Buchanan</LASTNAME>
+          <FIRSTNAME>Steven</FIRSTNAME>
+          <hobbies>
+          </hobbies>
+          <email>Buchanan@steven.com</email>  
+      </person>
+      <person id="6">
+          <LASTNAME>Suyama</LASTNAME>
+          <FIRSTNAME>Michael</FIRSTNAME>
+      </person>
+      <person id="7">
+          <LASTNAME>King</LASTNAME>
+          <FIRSTNAME>Robert</FIRSTNAME>
+      </person>
+  </category>
+  <category name="Other">    
+      <person id="8">   
+          <LASTNAME>Callahan</LASTNAME>
+          <FIRSTNAME>Laura</FIRSTNAME>
+          <email>email25@my.domain3.it</email> 
+      </person>
+      <person id="9">
+          <LASTNAME>Dodsworth</LASTNAME>
+          <email>Dodsworth@my.anne.it</email> 
+      </person>
+  </category>                                                           
+</addressbook>
